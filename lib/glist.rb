@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop:disable GuardClause, AbcSize
-
+require 'net/http'
 require 'set'
 
 # Searches for books, and saves them to a reading list
@@ -52,8 +51,15 @@ class BookList
 
   def case_two
     @choice = 0
-    # Search methods to go here
+    fetch_url
     go
+  end
+
+  def fetch_url
+    puts 'Search a book by title: '
+    query = gets.chomp
+    @url = 'https://www.googleapis.com/books/v1/volumes?q=' + query.to_s
+    puts @url
   end
 
   def reading_list
