@@ -17,16 +17,17 @@
       "/Users/James/Projects/gbooks/GBooks-Reading-List/lib/glist.rb": [
         null,
         null,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
         1,
         1,
+        1,
+        1,
         null,
-        null,
-        1,
-        1,
-        1,
-        1,
         1,
         null,
         null,
@@ -72,6 +73,16 @@
         0,
         0,
         0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
         null,
         null,
         1,
@@ -109,6 +120,9 @@
         1,
         1,
         0,
+        0,
+        0,
+        null,
         0,
         0,
         null,
@@ -167,6 +181,6 @@
         null
       ]
     },
-    "timestamp": 1572966185
+    "timestamp": 1572967177
   }
 }

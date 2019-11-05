@@ -13,6 +13,9 @@
 
 # Testing
 
+- Feature tested by running app manually
+
+- For automated tests:
 - Navigate to GBooks-Reading-List in console
 - Run `rspec`
 
@@ -33,12 +36,14 @@ This application should allow you to:
 
 # Approach
 
-- I will use an API to query the Google Books API
-- I will parse the JSON, and save the results to the reading list
+- The book search is performed by querying the googleapis site
+- The data is fetched with 'net/http'
+- The results are parsed with 'json'
 
-- Started by hard-coding the url to be sent to the API, and parsing the result
+- Started by hard-coding the url to be sent to the API, and parsing the result, and then replaced search parameters
 
 # Current
 
 - Can view Reading List
 - Can search for a book and get a link to a JSON result
+- Search returns JSON result parsed from browser
