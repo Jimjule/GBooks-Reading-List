@@ -10,7 +10,6 @@ class BookList
   def initialize
     @list = Set['A Book | By a Person | That was Published', 'And a Sequel']
     @choice = 0
-    # When option to save comes, 0 to return, 1-5 to save
     @save = -1
   end
 
@@ -56,8 +55,10 @@ class BookList
     @choice = 0
     fetch_url
     json(@url)
+    check_valid
     top_results
     result_data
+    save_result
     go
   end
 
@@ -73,6 +74,14 @@ class BookList
     puts 'Loading...'
     json = Net::HTTP.get(URI.parse(target))
     @hash = JSON.parse(json)
+  end
+
+  # Returns to the beginning if no matches
+  def check_valid
+    if @hash['totalItems'] == 0
+      puts 'No results, try again'
+      go
+    end
   end
 
   # Saves top five results
@@ -99,6 +108,21 @@ class BookList
       end
       i += 1
     end
+  end
+
+  def save_result
+    while @save != 0
+      reading_list
+      puts 'Save with 1-5, return with 0'
+      @save = gets.chomp.to_i
+      if @save.positive? && @save < @five.length + 1
+        @list.add(@five[@save - 1]['volumeInfo']['title'] +
+          ' | ' + @five[@save - 1]['volumeInfo']['authors'].join(', ') +
+          ' | ' + @five[@save - 1]['volumeInfo']['publisher'])
+      end
+      save_result
+    end
+    menu
   end
 
   def reading_list

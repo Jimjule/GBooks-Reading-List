@@ -45,4 +45,14 @@ This application should allow you to:
 # Current
 
 - Can view Reading List
-- Searching for a book returns a list of 5 books, with title, author, and publisher
+- Can search for books by title by typing in a query
+- Displays a list of 5 books matching that query
+- Each item on the list includes the author, title, and publishing company of the book
+- Can save books to Reading List
+- Will not save duplicatess
+
+# Future
+
+- Break BookList into smaller classes
+- Search by author, publisher, or other
+- Limit returned data to 5 books
