@@ -98,15 +98,19 @@ class BookList
   def result_data
     i = 0
     while i < @five.length
-      puts '----- ' + (i + 1).to_s
-      puts 'Title: ' + @five[i]['volumeInfo']['title']
-      puts 'Author(s): ' + @five[i]['volumeInfo']['authors'].join(', ')
-      if @five[i]['volumeInfo']['publisher']
-        puts 'Publisher: ' + @five[i]['volumeInfo']['publisher']
-      else
-        puts 'Publisher: Unknown'
-      end
+      display_five(i)
       i += 1
+    end
+  end
+
+  def display_five(i)
+    puts '----- ' + (i + 1).to_s
+    puts 'Title: ' + @five[i]['volumeInfo']['title']
+    puts 'Author(s): ' + @five[i]['volumeInfo']['authors'].join(', ')
+    if @five[i]['volumeInfo']['publisher']
+      puts 'Publisher: ' + @five[i]['volumeInfo']['publisher']
+    else
+      puts 'Publisher: Unknown'
     end
   end
 
@@ -123,6 +127,16 @@ class BookList
       save_result
     end
     menu
+  end
+
+  def save_result_logic
+    puts 'Save with 1-5, return with 0'
+    @save = gets.chomp.to_i
+    if @save.positive? && @save < @five.length + 1
+      @list.add(@five[@save - 1]['volumeInfo']['title'] +
+        ' | ' + @five[@save - 1]['volumeInfo']['authors'].join(', ') +
+        ' | ' + @five[@save - 1]['volumeInfo']['publisher'])
+    end
   end
 
   def reading_list
