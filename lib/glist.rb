@@ -56,6 +56,8 @@ class BookList
     @choice = 0
     fetch_url
     json(@url)
+    top_results
+    result_data
     go
   end
 
@@ -64,7 +66,6 @@ class BookList
     puts 'Search a book by title: '
     query = gets.chomp
     @url = 'https://www.googleapis.com/books/v1/volumes?q=' + query.to_s
-    puts @url
   end
 
   # Gets JSON from url, and converts to a hash
@@ -72,7 +73,32 @@ class BookList
     puts 'Loading...'
     json = Net::HTTP.get(URI.parse(target))
     @hash = JSON.parse(json)
-    puts @hash
+  end
+
+  # Saves top five results
+  def top_results
+    i = 0
+    @five = []
+    until i == 5
+      @five.push(@hash['items'][i])
+      i += 1
+    end
+  end
+
+  # Displays title, author, etc. of top results
+  def result_data
+    i = 0
+    while i < @five.length
+      puts '----- ' + (i + 1).to_s
+      puts 'Title: ' + @five[i]['volumeInfo']['title']
+      puts 'Author(s): ' + @five[i]['volumeInfo']['authors'].join(', ')
+      if @five[i]['volumeInfo']['publisher']
+        puts 'Publisher: ' + @five[i]['volumeInfo']['publisher']
+      else
+        puts 'Publisher: Unknown'
+      end
+      i += 1
+    end
   end
 
   def reading_list

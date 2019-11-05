@@ -45,5 +45,4 @@ This application should allow you to:
 # Current
 
 - Can view Reading List
-- Can search for a book and get a link to a JSON result
-- Search returns JSON result parsed from browser
+- Searching for a book returns a list of 5 books, with title, author, and publisher
