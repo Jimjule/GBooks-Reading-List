@@ -117,13 +117,7 @@ class BookList
   def save_result
     while @save != 0
       reading_list
-      puts 'Save with 1-5, return with 0'
-      @save = gets.chomp.to_i
-      if @save.positive? && @save < @five.length + 1
-        @list.add(@five[@save - 1]['volumeInfo']['title'] +
-          ' | ' + @five[@save - 1]['volumeInfo']['authors'].join(', ') +
-          ' | ' + @five[@save - 1]['volumeInfo']['publisher'])
-      end
+      save_result_logic
       save_result
     end
     menu

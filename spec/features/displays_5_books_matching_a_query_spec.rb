@@ -7,6 +7,7 @@ describe BookList do
     booklist = BookList.new
     allow(booklist).to receive(:gets).and_return('2', 'Ruby', '0', '3')
     booklist.go
-    expect(booklist.go).to include('----- 1', '----- 2', '----- 3', '----- 4', '----- 5')
+    expect(booklist.go).to include
+    ('----- 1', '----- 2', '----- 3', '----- 4', '----- 5')
   end
 end
