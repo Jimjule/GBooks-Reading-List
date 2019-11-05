@@ -56,3 +56,8 @@ This application should allow you to:
 - Break BookList into smaller classes
 - Search by author, publisher, or other
 - Limit returned data to 5 books
+
+# Known Bugs
+
+- Tests do not run together, must be individually run
+- Will only save books from the first search each time the program is run

@@ -170,13 +170,6 @@
         0,
         0,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null
       ],
       "/Users/James/Projects/gbooks/GBooks-Reading-List/spec/features/can_view_reading_list_spec.rb": [
@@ -301,6 +294,6 @@
         null
       ]
     },
-    "timestamp": 1572970560
+    "timestamp": 1572971332
   }
 }
