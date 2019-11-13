@@ -49,7 +49,7 @@ This application should allow you to:
 - Displays a list of 5 books matching that query
 - Each item on the list includes the author, title, and publishing company of the book
 - Can save books to Reading List
-- Will not save duplicatess
+- Will not save duplicates
 
 # Future
 
@@ -61,3 +61,13 @@ This application should allow you to:
 
 - Tests do not run together, must be individually run
 - Will only save books from the first search each time the program is run
+
+# This Version
+
+- Use more descriptive and fitting variable names
+- Remove magic strings
+
+# To Be Implemented
+
+- SRP methods
+- Design (List steps, consider input and output for each, should they share state?)
