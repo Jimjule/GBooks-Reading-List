@@ -60,17 +60,15 @@ This application should allow you to:
 # Known Bugs
 
 - Tests do not run together, must be individually run
-- Will only save books from the first search each time the program is run
 
 # This Version
 
 - Design (List steps, consider input and output for each, should they share state?)
 - Refactor according to chart_plan.jpg
   - Remove superfluous code
-  - Remove unnecessary saving of top 5 results
-  - Rename methods
-  - Split methods per SRP
-  - Reduce shared state
+  - Split large method
+  - Made methods private
+- Can now save books from more than one search
 
 # To Be Implemented
 

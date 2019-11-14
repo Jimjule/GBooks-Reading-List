@@ -14,26 +14,26 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-11-14T18:02:58+00:00">2019-11-14T18:02:58+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-11-14T19:38:08+00:00">2019-11-14T19:38:08+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">63.95%</span></span>
+    (<span class="covered_percent"><span class="red">66.67%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.43
+         1.52
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>8</b> files in total.
-    <b>147</b> relevant lines. 
-    <span class="green"><b>94</b> lines covered</span> and
+    <b>159</b> relevant lines. 
+    <span class="green"><b>106</b> lines covered</span> and
     <span class="red"><b>53</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -52,10 +52,10 @@
       
       <tr>
         <td class="strong"><a href="#3b5ac4bd38490a06ffd55cf7be3ded238add2b4b" class="src_link" title="lib/glist.rb">lib/glist.rb</a></td>
-        <td class="green strong">95.52 %</td>
-        <td>126</td>
-        <td>67</td>
-        <td>64</td>
+        <td class="green strong">96.2 %</td>
+        <td>130</td>
+        <td>79</td>
+        <td>76</td>
         <td>3</td>
         <td>2.7</td>
       </tr>
@@ -149,10 +149,10 @@
         <div class="source_table" id="3b5ac4bd38490a06ffd55cf7be3ded238add2b4b">
   <div class="header">
     <h3>lib/glist.rb</h3>
-    <h4><span class="green">95.52 %</span> covered</h4>
+    <h4><span class="green">96.2 %</span> covered</h4>
     <div>
-      <b>67</b> relevant lines. 
-      <span class="green"><b>64</b> lines covered</span> and
+      <b>79</b> relevant lines. 
+      <span class="green"><b>76</b> lines covered</span> and
       <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
@@ -205,7 +205,7 @@
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby"># Searches for books, and saves them to a reading list</code>
+          <code class="ruby"># Searches for books, and saves them to a reading list for viewing</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
@@ -232,28 +232,28 @@
           <code class="ruby">  JSON_ARRAY_OF_BOOK_INFO = &#39;volumeInfo&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  MAX_NUMBER_OF_RESULTS = 5</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
+        <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    @reading_list = Set[]</code>
-        </li>
-      
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">    @result_to_save_to_reading_list = -1</code>
+          <code class="ruby">    @reading_list = Set[]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
@@ -286,154 +286,154 @@
           <code class="ruby">    prompt_search_or_quit</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby">    # check_for_no_results</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="23">
-          
-          
-          <code class="ruby">    # top_results</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby">    # result_data</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="25">
-          
-          
-          <code class="ruby">    # save_result</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="26">
+        <li class="covered" data-hits="2" data-linenumber="22">
           <span class="hits">2</span>
           
           <code class="ruby">    go</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="29">
+        <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
           <code class="ruby">  def prompt_search_or_quit</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="30">
+        <li class="covered" data-hits="3" data-linenumber="26">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    @result_to_save_to_reading_list = &#39;&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="27">
           <span class="hits">3</span>
           
           <code class="ruby">    puts &#39;Search a book by title, or press ENTER to quit: &#39;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="31">
+        <li class="covered" data-hits="3" data-linenumber="28">
           <span class="hits">3</span>
           
           <code class="ruby">    query = gets.chomp</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="32">
+        <li class="covered" data-hits="3" data-linenumber="29">
           <span class="hits">3</span>
           
           <code class="ruby">    query != &#39;&#39; ? fetch_url(query) : quit</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby">  # Constructs url from user query</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="36">
+        <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
           <code class="ruby">  def fetch_url(user_input)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="37">
+        <li class="covered" data-hits="2" data-linenumber="34">
           <span class="hits">2</span>
           
           <code class="ruby">    fetch_json_from_url(GOOGLE_API_SEARCH_URL + user_input.to_s)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="36">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="37">
           
           
-          <code class="ruby">  # Gets JSON from url, and converts to a hash</code>
+          <code class="ruby">  # Gets JSON from url</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
+        <li class="covered" data-hits="1" data-linenumber="38">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="39">
           <span class="hits">1</span>
           
           <code class="ruby">  def fetch_json_from_url(url_of_search)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="42">
+        <li class="covered" data-hits="2" data-linenumber="40">
           <span class="hits">2</span>
           
           <code class="ruby">    puts &#39;Loading...&#39;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="43">
+        <li class="covered" data-hits="2" data-linenumber="41">
           <span class="hits">2</span>
           
           <code class="ruby">    json_results_of_query = Net::HTTP.get(URI.parse(url_of_search))</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="44">
+        <li class="covered" data-hits="2" data-linenumber="42">
           <span class="hits">2</span>
           
           <code class="ruby">    parse_fetched_json(json_results_of_query)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="44">
           
           
           <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">  # Converts JSON to a hash</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="46">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="47">
@@ -475,442 +475,466 @@
         <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
+          
           <code class="ruby">  def check_for_no_results(hash_of_results)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="54">
+        <li class="covered" data-hits="2" data-linenumber="55">
           <span class="hits">2</span>
           
           <code class="ruby">    if hash_of_results[&#39;totalItems&#39;] == 0</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="55">
+        <li class="missed" data-hits="0" data-linenumber="56">
           
           
           <code class="ruby">      puts &#39;No results, try again&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="56">
+        <li class="missed" data-hits="0" data-linenumber="57">
           
           
           <code class="ruby">      go</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="57">
+        <li class="never" data-hits="" data-linenumber="58">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="58">
+        <li class="covered" data-hits="2" data-linenumber="59">
           <span class="hits">2</span>
           
-          <code class="ruby">    top_results(hash_of_results)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="59">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    display_top_five_results(hash_of_results)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="61">
           
           
-          <code class="ruby">  # Saves top five results</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="62">
           <span class="hits">1</span>
           
-          <code class="ruby">  def top_results(hash_of_results)</code>
+          <code class="ruby">  private</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="63">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="63">
+          <span class="hits">1</span>
           
-          <code class="ruby">    loop_incrementing_index = 0</code>
+          <code class="ruby">  def display_top_five_results(hash_of_results)</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="64">
           <span class="hits">2</span>
           
-          <code class="ruby">    top_five_results = []</code>
+          <code class="ruby">    loop_incrementing_index = 0</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="65">
           <span class="hits">2</span>
           
-          <code class="ruby">    until loop_incrementing_index == 5</code>
+          <code class="ruby">    while loop_incrementing_index &lt; 5</code>
         </li>
       
         <li class="covered" data-hits="10" data-linenumber="66">
           <span class="hits">10</span>
           
-          <code class="ruby">      top_five_results.push(hash_of_results[&#39;items&#39;][loop_incrementing_index])</code>
+          <code class="ruby">      puts &#39;----- &#39; + (loop_incrementing_index + 1).to_s</code>
         </li>
       
         <li class="covered" data-hits="10" data-linenumber="67">
           <span class="hits">10</span>
           
+          <code class="ruby">      displays_title(hash_of_results, loop_incrementing_index)</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="68">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      displays_authors(hash_of_results, loop_incrementing_index)</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="69">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      displays_publisher(hash_of_results, loop_incrementing_index)</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="70">
+          <span class="hits">10</span>
+          
           <code class="ruby">      loop_incrementing_index += 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="68">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="69">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    display_top_five_results(top_five_results)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="70">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="71">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="72">
+        <li class="covered" data-hits="2" data-linenumber="72">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">  # # Displays title, author, etc. of top results</code>
+          <code class="ruby">    save_result(hash_of_results)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="73">
           
           
-          <code class="ruby">  # def result_data(top_five_results)</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="74">
           
           
-          <code class="ruby">  #   loop_incrementing_index = 0</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="covered" data-hits="1" data-linenumber="75">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #   while loop_incrementing_index &lt; top_five_results.length</code>
+          <code class="ruby">  private</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="76">
+        <li class="covered" data-hits="1" data-linenumber="76">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #     display_top_five_results(loop_incrementing_index)</code>
+          <code class="ruby">  def displays_title(hash_of_results, loop_incrementing_index)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="77">
+        <li class="covered" data-hits="10" data-linenumber="77">
+          <span class="hits">10</span>
           
-          
-          <code class="ruby">  #     loop_incrementing_index += 1</code>
+          <code class="ruby">    puts &#39;Title: &#39; + hash_of_results[&#39;items&#39;][loop_incrementing_index][JSON_ARRAY_OF_BOOK_INFO][&#39;title&#39;]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="78">
           
           
-          <code class="ruby">  #   end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="79">
           
           
-          <code class="ruby">  # end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="80">
+        <li class="covered" data-hits="1" data-linenumber="80">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">  private</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="81">
           <span class="hits">1</span>
           
-          <code class="ruby">  def display_top_five_results(top_five_results)</code>
+          <code class="ruby">  def displays_authors(hash_of_results, loop_incrementing_index)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="82">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    loop_incrementing_index = 0</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="83">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    while loop_incrementing_index &lt; 5</code>
-        </li>
-      
-        <li class="covered" data-hits="10" data-linenumber="84">
+        <li class="covered" data-hits="10" data-linenumber="82">
           <span class="hits">10</span>
           
-          <code class="ruby">      puts &#39;----- &#39; + (loop_incrementing_index + 1).to_s</code>
+          <code class="ruby">    puts &#39;Author(s): &#39; + hash_of_results[&#39;items&#39;][loop_incrementing_index][JSON_ARRAY_OF_BOOK_INFO][&#39;authors&#39;].join(&#39;, &#39;)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="85">
-          <span class="hits">10</span>
+        <li class="never" data-hits="" data-linenumber="83">
           
-          <code class="ruby">      puts &#39;Title: &#39; + top_five_results[loop_incrementing_index][JSON_ARRAY_OF_BOOK_INFO][&#39;title&#39;]</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="86">
-          <span class="hits">10</span>
+        <li class="never" data-hits="" data-linenumber="84">
           
-          <code class="ruby">      puts &#39;Author(s): &#39; + top_five_results[loop_incrementing_index][JSON_ARRAY_OF_BOOK_INFO][&#39;authors&#39;].join(&#39;, &#39;)</code>
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="85">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="86">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def displays_publisher(hash_of_results, loop_incrementing_index)</code>
         </li>
       
         <li class="covered" data-hits="10" data-linenumber="87">
           <span class="hits">10</span>
           
-          <code class="ruby">      if top_five_results[loop_incrementing_index][JSON_ARRAY_OF_BOOK_INFO][&#39;publisher&#39;]</code>
+          <code class="ruby">    if hash_of_results[&#39;items&#39;][loop_incrementing_index][JSON_ARRAY_OF_BOOK_INFO][&#39;publisher&#39;]</code>
         </li>
       
         <li class="covered" data-hits="10" data-linenumber="88">
           <span class="hits">10</span>
           
-          <code class="ruby">        puts &#39;Publisher: &#39; + top_five_results[loop_incrementing_index][JSON_ARRAY_OF_BOOK_INFO][&#39;publisher&#39;]</code>
+          <code class="ruby">      puts &#39;Publisher: &#39; + hash_of_results[&#39;items&#39;][loop_incrementing_index][JSON_ARRAY_OF_BOOK_INFO][&#39;publisher&#39;]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="89">
           
           
-          <code class="ruby">      else</code>
+          <code class="ruby">    else</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="90">
           
           
-          <code class="ruby">        puts &#39;Publisher: Unknown&#39;</code>
+          <code class="ruby">      puts &#39;Publisher: Unknown&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="91">
           
           
-          <code class="ruby">      end</code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="92">
-          <span class="hits">10</span>
+        <li class="never" data-hits="" data-linenumber="92">
           
-          <code class="ruby">      loop_incrementing_index += 1</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="93">
           
           
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="94">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    save_result(top_five_results)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="95">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="96">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="97">
+        <li class="covered" data-hits="1" data-linenumber="94">
           <span class="hits">1</span>
           
-          <code class="ruby">  def save_result(top_five_results)</code>
+          <code class="ruby">  private</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="98">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="1" data-linenumber="95">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def save_result(hash_of_results)</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="96">
+          <span class="hits">5</span>
           
           <code class="ruby">    while @result_to_save_to_reading_list != 0</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="99">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="97">
+          <span class="hits">3</span>
           
           <code class="ruby">      view_reading_list</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="100">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="98">
+          <span class="hits">3</span>
           
-          <code class="ruby">      save_result_logic(top_five_results)</code>
+          <code class="ruby">      prompt_save_input</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="101">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="99">
+          <span class="hits">3</span>
           
-          <code class="ruby">      save_result(top_five_results)</code>
+          <code class="ruby">      save_result_logic(hash_of_results)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="100">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      save_result(hash_of_results)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="101">
+          
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="102">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="103">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="104">
+        <li class="covered" data-hits="1" data-linenumber="104">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">  private</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="105">
           <span class="hits">1</span>
           
-          <code class="ruby">  def save_result_logic(top_five_results)</code>
+          <code class="ruby">  def save_result_logic(hash_of_results)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="106">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="106">
+          <span class="hits">3</span>
           
-          <code class="ruby">    puts &#39;Save with 1-5, return with 0&#39;</code>
+          <code class="ruby">    if @result_to_save_to_reading_list.positive? &amp;&amp; @result_to_save_to_reading_list -1 &lt; MAX_NUMBER_OF_RESULTS</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="107">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    @result_to_save_to_reading_list = gets.chomp.to_i</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="108">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    if @result_to_save_to_reading_list.positive? &amp;&amp; @result_to_save_to_reading_list &lt; top_five_results.length + 1</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="109">
+        <li class="covered" data-hits="1" data-linenumber="107">
           <span class="hits">1</span>
           
-          <code class="ruby">      @reading_list.add(top_five_results[@result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO][&#39;title&#39;] +</code>
+          <code class="ruby">      @reading_list.add(hash_of_results[&#39;items&#39;][@result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO][&#39;title&#39;] +</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="108">
+          
+          
+          <code class="ruby">        &#39; | &#39; + hash_of_results[&#39;items&#39;][@result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO][&#39;authors&#39;].join(&#39;, &#39;) +</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="109">
+          
+          
+          <code class="ruby">        &#39; | &#39; + hash_of_results[&#39;items&#39;][@result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO][&#39;publisher&#39;])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="110">
           
           
-          <code class="ruby">        &#39; | &#39; + top_five_results[@result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO][&#39;authors&#39;].join(&#39;, &#39;) +</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="111">
           
           
-          <code class="ruby">        &#39; | &#39; + top_five_results[@result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO][&#39;publisher&#39;])</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="112">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="113">
+        <li class="covered" data-hits="1" data-linenumber="113">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def prompt_save_input</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="114">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    puts &#39;Save with 1-5, press ENTER to return&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="115">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    @result_to_save_to_reading_list = gets.chomp.to_i</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="116">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="114">
+        <li class="never" data-hits="" data-linenumber="117">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="115">
+        <li class="covered" data-hits="1" data-linenumber="118">
           <span class="hits">1</span>
           
           <code class="ruby">  def view_reading_list</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="116">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="119">
+          <span class="hits">6</span>
           
           <code class="ruby">    puts &quot;Your Reading List now contains #{@reading_list.length} books: &quot;</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="117">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="120">
+          <span class="hits">6</span>
           
           <code class="ruby">    @reading_list.each do |book|</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="118">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="121">
+          <span class="hits">4</span>
           
           <code class="ruby">      puts book</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="119">
+        <li class="never" data-hits="" data-linenumber="122">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="120">
+        <li class="never" data-hits="" data-linenumber="123">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="121">
+        <li class="never" data-hits="" data-linenumber="124">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="122">
+        <li class="covered" data-hits="1" data-linenumber="125">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="126">
           <span class="hits">1</span>
           
           <code class="ruby">  def quit</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="123">
+        <li class="covered" data-hits="1" data-linenumber="127">
           <span class="hits">1</span>
           
           <code class="ruby">    puts &#39;Goodbye&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="124">
+        <li class="covered" data-hits="1" data-linenumber="128">
           <span class="hits">1</span>
           
           <code class="ruby">    exit</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="125">
+        <li class="never" data-hits="" data-linenumber="129">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="126">
+        <li class="never" data-hits="" data-linenumber="130">
           
           
           <code class="ruby">end</code>
