@@ -66,10 +66,13 @@ This application should allow you to:
 
 - Design (List steps, consider input and output for each, should they share state?)
 - Refactor according to chart_plan.jpg
-  - Refactored tests
-  - Remove menu loop
-  - Display reading list when opened
+  - Remove superfluous code
+  - Remove unnecessary saving of top 5 results
+  - Rename methods
+  - Split methods per SRP
+  - Reduce shared state
 
 # To Be Implemented
 
 - SRP methods
+- Further contain state
