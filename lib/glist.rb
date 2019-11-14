@@ -13,51 +13,54 @@ class BookList
 
   def initialize
     @reading_list = Set[]
-    @menu_choice = 0
+    # @menu_choice = 0
     @result_to_save_to_reading_list = -1
   end
 
-  def enter_menu_choice
-    @menu_choice = gets.chomp.to_i
-  end
+  # def enter_menu_choice
+  #   @menu_choice = gets.chomp.to_i
+  # end
 
-  def display_menu_choices
-    puts '1. View Reading List'
-    puts '2. Search for Books'
-    puts '3. Exit'
-    puts 'Select an option by typing a number: '
-  end
+  # def display_menu_choices
+  #   puts '1. View Reading List'
+  #   puts '2. Search for Books'
+  #   puts '3. Exit'
+  #   puts 'Select an option by typing a number: '
+  # end
 
   def go
-    while @menu_choice < 1 || @menu_choice > 3
-      puts '~~~'
-      display_menu_choices
-      enter_menu_choice
-      menu
-    end
+    case_two
+    # while @menu_choice < 1 || @menu_choice > 3
+    #   puts '~~~'
+    #   display_menu_choices
+    #   enter_menu_choice
+    #   menu
+    # end
   end
 
-  def menu
-    case @menu_choice
-    when 1
-      case_one
-    when 2
-      case_two
-    when 3
-      puts 'Goodbye!'
-      exit
-    end
-  end
+  # def menu
+  #   case @menu_choice
+  #   when 1
+  #     case_one
+  #   when 2
+  #     case_two
+  #   when 3
+  #     puts 'Goodbye!'
+  #     exit
+  #   end
+  # end
 
-  def case_one
-    @menu_choice = 0
-    view_reading_list
-    go
-  end
+  # def case_one
+  #   @menu_choice = 0
+  #   view_reading_list
+  #   go
+  # end
 
   def case_two
-    @menu_choice = 0
-    fetch_url
+    # @menu_choice = 0
+    view_reading_list
+    # fetch_url
+    prompt_search_or_quit
     json(@book_search_url)
     check_for_no_results
     top_results
@@ -66,11 +69,20 @@ class BookList
     go
   end
 
-  # Constructs url from user query
-  def fetch_url
-    puts 'Search a book by title: '
+  def prompt_search_or_quit
+    puts 'Search a book by title, or press ENTER to quit: '
     query = gets.chomp
-    @book_search_url = GOOGLE_API_SEARCH_URL + query.to_s
+    query != '' ? fetch_url(query) : quit
+  end
+
+  def quit
+    puts 'Goodbye'
+    exit
+  end
+
+  # Constructs url from user query
+  def fetch_url(user_input)
+    @book_search_url = GOOGLE_API_SEARCH_URL + user_input.to_s
   end
 
   # Gets JSON from url, and converts to a hash
@@ -124,7 +136,7 @@ class BookList
       save_result_logic
       save_result
     end
-    menu
+    # menu
   end
 
   def save_result_logic

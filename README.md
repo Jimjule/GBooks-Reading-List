@@ -64,10 +64,12 @@ This application should allow you to:
 
 # This Version
 
-- Use more descriptive and fitting variable names
-- Remove magic strings
+- Design (List steps, consider input and output for each, should they share state?)
+- Refactor according to chart_plan.jpg
+  - Refactored tests
+  - Remove menu loop
+  - Display reading list when opened
 
 # To Be Implemented
 
 - SRP methods
-- Design (List steps, consider input and output for each, should they share state?)

@@ -10,7 +10,7 @@ describe BookList do
 
   it 'Reading List is a Set' do
     booklist = BookList.new
-    allow(booklist).to receive(:gets).and_return('3')
-    expect(booklist.reading_list).to be_kind_of(Set)
+    allow(booklist).to receive(:gets).and_return('')
+    expect(booklist.view_reading_list).to be_kind_of(Set)
   end
 end
