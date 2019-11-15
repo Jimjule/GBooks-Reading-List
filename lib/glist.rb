@@ -124,14 +124,14 @@ class BookList
     while @result_to_save_to_reading_list != 0
       view_reading_list
       prompt_save_input
-      save_result_logic(hash_of_results)
+      save_chosen_result(hash_of_results)
       save_to_reading_list(hash_of_results)
     end
   end
 
   private
 
-  def save_result_logic(hash_of_results)
+  def save_chosen_result(hash_of_results)
     if @result_to_save_to_reading_list.positive? && @result_to_save_to_reading_list - 1 < MAX_NUMBER_OF_RESULTS
         @reading_list.add(hash_of_results['items'][@result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO]['title'] +
           SEPARATOR + hash_of_results['items'][@result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO]['authors'].join(', ') +
