@@ -19,6 +19,7 @@ class BookList
     @reading_list = Set[]
   end
 
+  # Calls the methods
   def go
     view_reading_list
     user_choice = prompt_search_or_quit
@@ -37,12 +38,11 @@ class BookList
     @result_to_save_to_reading_list = ''
     puts 'Search a book by title, or press ENTER to quit: '
     query = gets.chomp
-    # does_user_quit(query)
   end
 
+  # Quits if user chose to
   private
   def does_user_quit(user_input)
-    # user_input != '' ? fetch_url(user_input) : quit
     quit if user_input == ''
   end
 
@@ -56,14 +56,11 @@ class BookList
   private
   def fetch_json_from_url(url_of_search)
     json_results_of_query = Net::HTTP.get(URI.parse(url_of_search))
-    # parse_fetched_json(json_results_of_query)
   end
 
   # Converts JSON to a hash
   private
   def parse_fetched_json(json_from_url)
-    # hash_of_search_results = JSON.parse(json_from_url)
-    # check_for_no_results(hash_of_search_results)
     JSON.parse(json_from_url)
   end
 
@@ -74,7 +71,6 @@ class BookList
       puts 'No results, try again'
       go
     end
-    # display_top_five_results(hash_of_search_results)
   end
 
   private
@@ -87,7 +83,6 @@ class BookList
       displays_publisher(hash_of_results, loop_incrementing_index)
       loop_incrementing_index += 1
     end
-    # save_to_reading_list(hash_of_results)
   end
 
   private

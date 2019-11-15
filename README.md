@@ -60,7 +60,4 @@ This application should allow you to:
 
 # This Version
 
-- Design (List steps, consider input and output for each, should they share state?)
-- Refactor according to chart_plan.jpg
-  - Split large methods
-  - Made methods private
+- Removed unused code
