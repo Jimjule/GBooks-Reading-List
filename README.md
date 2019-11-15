@@ -58,10 +58,6 @@ This application should allow you to:
 - Limit returned data to 5 books
 - Remove need for reading list being an instance variable
 
-# Known Bugs
-
-- Necessary to press ENTER an extra time for each item on the list to exit
-
 # This Version
 
-- Remove instance variable for choosing what to save
+- Refactored save methods to remove bug
