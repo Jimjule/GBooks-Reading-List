@@ -33,7 +33,9 @@ class BookList
   end
 
   # User chooses to search or quit
+
   private
+
   def prompt_search_or_quit
     @result_to_save_to_reading_list = ''
     puts 'Search a book by title, or press ENTER to quit: '
@@ -41,31 +43,41 @@ class BookList
   end
 
   # Quits if user chose to
+
   private
+
   def does_user_quit(user_input)
     quit if user_input == ''
   end
 
   # Constructs url from user query
+
   private
+
   def search_get_url(user_input)
     fetch_json_from_url(GOOGLE_API_SEARCH_URL + user_input.to_s)
   end
 
   # Gets JSON from url
+
   private
+
   def fetch_json_from_url(url_of_search)
-    json_results_of_query = Net::HTTP.get(URI.parse(url_of_search))
+    Net::HTTP.get(URI.parse(url_of_search))
   end
 
   # Converts JSON to a hash
+
   private
+
   def parse_fetched_json(json_from_url)
     JSON.parse(json_from_url)
   end
 
   # Returns to the beginning if no matches
+
   private
+
   def check_for_no_results(hash_of_results)
     if hash_of_results[JSON_NUMBER_OF_RESULTS] == 0
       puts 'No results, try again'
@@ -74,6 +86,7 @@ class BookList
   end
 
   private
+
   def display_top_five_results(hash_of_results)
     loop_incrementing_index = 0
     while loop_incrementing_index < 5
@@ -86,16 +99,19 @@ class BookList
   end
 
   private
+
   def displays_title(hash_of_results, loop_incrementing_index)
     puts 'Title: ' + hash_of_results['items'][loop_incrementing_index][JSON_ARRAY_OF_BOOK_INFO]['title']
   end
 
   private
+
   def displays_authors(hash_of_results, loop_incrementing_index)
     puts 'Author(s): ' + hash_of_results['items'][loop_incrementing_index][JSON_ARRAY_OF_BOOK_INFO]['authors'].join(', ')
   end
 
   private
+
   def displays_publisher(hash_of_results, loop_incrementing_index)
     hash_of_results['items'][loop_incrementing_index][JSON_ARRAY_OF_BOOK_INFO]['publisher'] ?
       "Publisher: #{hash_of_results['items'][loop_incrementing_index][JSON_ARRAY_OF_BOOK_INFO]['publisher']}" :
@@ -103,6 +119,7 @@ class BookList
   end
 
   private
+
   def save_to_reading_list(hash_of_results)
     while @result_to_save_to_reading_list != 0
       view_reading_list
@@ -113,21 +130,24 @@ class BookList
   end
 
   private
+
   def save_result_logic(hash_of_results)
-    if @result_to_save_to_reading_list.positive? && @result_to_save_to_reading_list -1 < MAX_NUMBER_OF_RESULTS
-      @reading_list.add(hash_of_results['items'][@result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO]['title'] +
-        SEPARATOR + hash_of_results['items'][@result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO]['authors'].join(', ') +
-        SEPARATOR + hash_of_results['items'][@result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO]['publisher'])
+    if @result_to_save_to_reading_list.positive? && @result_to_save_to_reading_list - 1 < MAX_NUMBER_OF_RESULTS
+        @reading_list.add(hash_of_results['items'][@result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO]['title'] +
+          SEPARATOR + hash_of_results['items'][@result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO]['authors'].join(', ') +
+          SEPARATOR + hash_of_results['items'][@result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO]['publisher'])
     end
   end
 
   private
+
   def prompt_save_input
     puts 'Save with 1-5, press ENTER to return'
     @result_to_save_to_reading_list = gets.chomp.to_i
   end
 
   private
+
   def view_reading_list
     puts "Your Reading List now contains #{@reading_list.length} books: "
     @reading_list.each do |book|
@@ -136,6 +156,7 @@ class BookList
   end
 
   private
+
   def quit
     puts 'Goodbye'
     exit

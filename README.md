@@ -60,4 +60,4 @@ This application should allow you to:
 
 # This Version
 
-- Removed unused code
+- Linting
