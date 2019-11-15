@@ -54,23 +54,13 @@ This application should allow you to:
 # Future
 
 - Break BookList into smaller classes
+- Remove result_to_save_to_reading_list instance variable
 - Search by author, publisher, or other
 - Limit returned data to 5 books
-
-# Known Bugs
-
-- Tests do not run together, must be individually run
 
 # This Version
 
 - Design (List steps, consider input and output for each, should they share state?)
 - Refactor according to chart_plan.jpg
-  - Remove superfluous code
-  - Split large method
+  - Split large methods
   - Made methods private
-- Can now save books from more than one search
-
-# To Be Implemented
-
-- SRP methods
-- Further contain state
