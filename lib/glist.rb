@@ -37,7 +37,6 @@ class BookList
   private
 
   def prompt_search_or_quit
-    @result_to_save_to_reading_list = ''
     puts 'Search a book by title, or press ENTER to quit: '
     query = gets.chomp
   end
@@ -120,30 +119,31 @@ class BookList
 
   private
 
+  # Handles all methods related to saving
   def save_to_reading_list(hash_of_results)
-    while @result_to_save_to_reading_list != 0
+    puts 'Save with 1-5, press ENTER to return'
+    while (result_to_save_to_reading_list = gets.chomp.to_i) != 0
       view_reading_list
-      prompt_save_input
-      save_chosen_result(hash_of_results)
+      save_chosen_result(hash_of_results, result_to_save_to_reading_list)
       save_to_reading_list(hash_of_results)
     end
   end
 
   private
 
-  def save_chosen_result(hash_of_results)
-    if @result_to_save_to_reading_list.positive? && @result_to_save_to_reading_list - 1 < MAX_NUMBER_OF_RESULTS
-        @reading_list.add(hash_of_results['items'][@result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO]['title'] +
-          SEPARATOR + hash_of_results['items'][@result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO]['authors'].join(', ') +
-          SEPARATOR + hash_of_results['items'][@result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO]['publisher'])
+  def save_chosen_result(hash_of_results, result_to_save_to_reading_list)
+    if result_to_save_to_reading_list.positive? && result_to_save_to_reading_list - 1 < MAX_NUMBER_OF_RESULTS
+        @reading_list.add(hash_of_results['items'][result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO]['title'] +
+          SEPARATOR + hash_of_results['items'][result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO]['authors'].join(', ') +
+          SEPARATOR + hash_of_results['items'][result_to_save_to_reading_list - 1][JSON_ARRAY_OF_BOOK_INFO]['publisher'])
     end
+    reset_save_choice
   end
 
   private
 
-  def prompt_save_input
-    puts 'Save with 1-5, press ENTER to return'
-    @result_to_save_to_reading_list = gets.chomp.to_i
+  def reset_save_choice
+    result_to_save_to_reading_list = ''
   end
 
   private

@@ -54,10 +54,14 @@ This application should allow you to:
 # Future
 
 - Break BookList into smaller classes
-- Remove result_to_save_to_reading_list instance variable
 - Search by author, publisher, or other
 - Limit returned data to 5 books
+- Remove need for reading list being an instance variable
+
+# Known Bugs
+
+- Necessary to press ENTER an extra time for each item on the list to exit
 
 # This Version
 
-- Rename uncommunicative method
+- Remove instance variable for choosing what to save
